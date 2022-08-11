@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Match Ranker</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--    <string name="user_token">AhtDHkk5GA2fHa/21D/hE4JdLJQGNWKALlZ+FkOXz/j7EWch2VbmQJrh6Wje5QNHTjO2naa5oA7I23koNi5giMpSaZx9jlDMRutP/RAGm/Z3whkyvSO6WIdCLdP9KrMSIGq4KI0mwmZ6vG3Qt6EaSWSJUizWg30rfv18kdyj+VuBWCdXTkAKpe7iABukki8iVYiaFe4Ig5FlnQ93DjcKizgnWQ24sj7YC7dNPatGeMu2o0eJPw==</string>-->
+    <string name="developer_token">eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IkxRVEE3OUhXSzgifQ.eyJpc3MiOiJDWFc3NlZIMzNEIiwiZXhwIjoxNjYwMjQwMDU5LCJpYXQiOjE2NDQ0NzIwNTl9.CixvfRskMsaGBCTaal9DrwhXoYLoKgfSL8Q9uVhMtYj__o3-f94w29GLbVvEbHlCN1WwAC-kqShDosYkyMd87A</string>
+
+</resources>

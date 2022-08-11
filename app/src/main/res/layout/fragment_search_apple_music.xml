@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".fragment.SearchAppleMusic">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_40sdp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backtoaccount"
+            android:layout_width="wrap_content"
+            android:padding="@dimen/_3sdp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+            android:layout_weight="1"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search Apple Music"
+            android:layout_weight="9"
+            android:paddingEnd="@dimen/_20sdp"
+           android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_17sdp"/>
+
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_below="@+id/top"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:id="@+id/break_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/greyish"/>
+
+
+    <RelativeLayout
+        android:id="@+id/searchVisibility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:background="@drawable/searchview_background"
+            android:drawableStart="@drawable/ic_baseline_search"
+            android:paddingStart="@dimen/_10sdp"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="Search" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/recycleList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:overScrollMode="never">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

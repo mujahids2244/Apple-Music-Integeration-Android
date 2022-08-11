@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/snack"
+    android:background="@color/grey"
+    tools:context=".activity.MainScreen">
+
+
+    <include
+        android:id="@+id/noint"
+        layout="@layout/no_internet_connection" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        android:id="@+id/apisyncalert"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="@drawable/edit_text_shape"
+        android:backgroundTint="@color/orange">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Syncing Apple Music.. "
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/musicplayer"
+        android:layout_below="@+id/apisyncalert"
+
+        />
+
+
+
+    <LinearLayout
+        android:layout_above="@id/playerProgress"
+        android:id="@+id/musicplayer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:visibility="gone"
+        android:layout_weight="0.1"
+        android:orientation="horizontal"
+        android:background="@drawable/bottonsheet_rounded">
+
+        <LinearLayout
+            android:id="@+id/playerclick"
+            android:layout_width="0dp"
+            android:paddingStart="@dimen/_10sdp"
+            android:layout_height="match_parent"
+            android:layout_weight="9">
+
+        <ImageView
+            app:cardCornerRadius="8dp"
+            android:id="@+id/song_pic"
+            android:layout_weight="0.1"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_launcher_background"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:maxLines="1"
+                android:id="@+id/songTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"/>
+
+            <TextView
+                android:maxLines="1"
+                android:id="@+id/songArtist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="desc"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"/>
+
+        </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/songPlay"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_notification_pause"/>
+
+        <ImageView
+            android:id="@+id/playNextSong"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/ic_notification_next"/>
+
+    </LinearLayout>
+
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/playerProgress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@id/bottom_navigation"
+        android:progressTint="@color/orange" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#1B1A1A"
+        app:itemBackground="@drawable/tab_background"
+        app:itemIconTint="@drawable/tab_color"
+        app:itemTextColor="@drawable/tab_color"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:background="@color/transparent_black_hex_66"
+        android:id="@+id/lottieLoader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_rawRes="@raw/loader"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>
