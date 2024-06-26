@@ -5,7 +5,7 @@ Developed an interactive app that enables users to create personalized playlists
 
 **Key Features:**
 
-Apple Music Authentication and Fetched songs from Apple's Server.
+Apple Music Authentication and Fetched Songs from Apple's Server.
 
 Song Comparison: Users can compare and rank random songs to curate their personalized playlists
 
