@@ -30,8 +30,8 @@ interface ApiInterface {
     fun getUserPlaylists(@Url offset:String): Call<PlayedModel>
 
 //    @Headers(
-//        "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IkxRVEE3OUhXSzgifQ.eyJpc3MiOiJDWFc3NlZIMzNEIiwiZXhwIjoxNjQ0MzQ1MTM1LCJpYXQiOjE2Mjg1NzcxMzV9.8D0kLXf-TA5dy4J2UFLPcI6VzgeYG7CI0QtTg0FNR8buEL4ZGrcX1jgvw7f7FkRtAqMpA6pA6FtIdX4Xm0b8ug",
-//        "Music-User-Token: AhtDHkk5GA2fHa/21D/hE4JdLJQGNWKALlZ+FkOXz/j7EWch2VbmQJrh6Wje5QNHTjO2naa5oA7I23koNi5giMpSaZx9jlDMRutP/RAGm/Z3whkyvSO6WIdCLdP9KrMSIGq4KI0mwmZ6vG3Qt6EaSWSJUizWg30rfv18kdyj+VuBWCdXTkAKpe7iABukki8iVYiaFe4Ig5FlnQ93DjcKizgnWQ24sj7YC7dNPatGeMu2o0eJPw=="
+//        "Authorization: Bearer",
+//        "Music-User-Token: "
 //    )
     @GET( )
     fun getUserPlaylistsSongs(@Url offset: String): Call<PlayedModel>
