@@ -5,7 +5,7 @@ import com.arhamsoft.matchranker.models.*
 
 object URLs {
     const val baseURL = "https://api.music.apple.com/"
-    const val baseURLUser = "https://matchrankerapi.arhamsoft.net/"
+    const val baseURLUser = ""
 
     const val register = "api/auth/signup"
     const val login = "api/auth/login"
